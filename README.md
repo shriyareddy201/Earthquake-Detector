@@ -27,16 +27,21 @@ EARTHQUAKE DETECTION
 ├── static/                 - Folder containing static files like CSS/JS.
 └── templates/              - HTML templates for the web interface.
 ```
+</br>
 
 <h2>Installation</h2>
 <p>To run this project, you will need Python 3.6 or higher. First, clone the repository and navigate to the project directory. Then install the required dependencies:</p>
-``
+
+```
 pip install -r requirements.txt 
-``
+```
 
 <h2>Usage</h2>
 <p>To start the application, run:</p>
-``` python app.py```
+
+``` 
+python app.py
+```
 <p>This will start a local web server. Access the web application by navigating to http://localhost:5000 in your web browser.</p>
 
 <h2>Features</h2>
