@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="color: black;">Future Earthquake Prediction Result</title>
+    <style>
+        .alert-popup {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            max-width: 400px;
+            margin: 20px auto;
+            text-align: left;
+        }
+        body {
+		background-image: url("./static/images/map.png");
+		
+	    }
+    </style>
+</head style="background-color: chocolate;">
+<header class="header">
+
+</header>
+<body style="text-align: center; color: red; "  >
+    <h1  style="color: #1b15d6; background-color: #fff;">Future Earthquake Prediction Result</h1>
+    
+    {% if alert_message %}
+        <div class="alert-popup">
+            <p>{{ alert_message }}</p>
+            {% if affected_area %}
+                <p>Affected Area: {{ affected_area }}</p>
+                <div id="map"></div>
+            {% endif %}
+        </div>
+        
+        <script>
+            // JavaScript code to show alert popup and initialize Google Maps
+            window.onload = function() {
+                alert("{{ alert_message }}");
+
+                // Check if the message indicates earthquakes in the region
+                if ("{{ alert_message }}" === "Alert: Yes, There have been earthquakes in the region.") {
+                    // Initialize Google Maps with a marker at a specific location
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        center: { lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE }, 
+                        zoom: 8
+                    });
+
+                    // Add a marker to the map
+                    var marker = new google.maps.Marker({
+                        position: { lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE }, 
+                        map: map,
+                        title: 'Affected Area'
+                    });
+                }
+            }
+        </script>
+    {% endif %}
+    
+    <img src="data:image/png;base64,{{ plot_url }}" alt="Model Accuracy Graph">
+    <h1 style="color: aliceblue;">Graph</h1>
+    <button onclick="window.location.href='/Graph'">Show Graph</button>              
+               
+                
+<ul >
+    <li ><a style="color: white;" href="/logout">Logout</a></li>
+</ul>
+</body>
+</html>

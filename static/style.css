@@ -1,0 +1,39 @@
+/* Background Image */
+body {
+    background-image: url('static/background.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    color: #fff; /* Text color on the background image */
+    font-family: Arial, sans-serif;
+}
+
+/* Centered Container */
+.container {
+    background-color: rgba(92, 11, 11, 0.7); /* Semi-transparent black background for text content */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Add your other CSS styles here */
+
+/* Header Logo and Title */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header img {
+    width: 100px; /* Adjust the logo size as needed */
+    height: 50px;
+    margin-right: 10px;
+}
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+  <!-- Header Section with Title and Logo -->
+  <header class="header" align="center" >
+    <img src="{{ logo }}" alt="Logo">
+    <h1 style="color:#fff; background-color: #1e0505; text-align-last: center;">{{ title }}</h1>
+</header>
+<style>
+	body {
+		background-image: url("./static/images/earthquake-seismograph-line-960x480 (1).jpg");
+		
+	}
+</style>
+<body style="background-color: chocolate;">
+
+    <div class="container">
+        <h1>Login</h1>
+        <form action="/login" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" name="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" required><br><br>
+            <input type="submit" value="Login">
+        </form>
+        <p >Don't have an account? <a href="/register" style="color: #ffffff;">Register</a></p>
+    </div>
+</body>
+</html>
